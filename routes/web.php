@@ -13,11 +13,19 @@ Route::get('/', function () {
 });
 
 // url = http://127.0.0.1:8000/ciccio
-Route::get('/ciccio', function () {
-    return 'ciccio';
+Route::get('/about', function () {
+    return view('about');
 });
 
-// url = http://127.0.0.1:8000/topolino
-Route::get('/topolino', function () {
-    return view('topolino');
+Route::get('/servizi', function () {
+    $services = ['Marketing', 'Comunicazione', 'Web Design'];
+    return view('services', ['services' => $services]);
+});
+
+Route::get('/servizi/{service}', function ($service) {
+    return view('service', ['service' => $service]);
+});
+
+Route::get('/contatti', function () {
+    return view('contacts');
 });
