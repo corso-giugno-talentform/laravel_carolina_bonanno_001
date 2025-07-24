@@ -26,25 +26,23 @@
         <nav class="mx-4 my-2"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('services') }}">Servizi</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ $service }}</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $project['name'] }}</li>
             </ol>
         </nav>
     </header>
 
     <div class="container m-5">
-        <h1 class="text-center pb-5">{{ $service }}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
+        <h1 class="text-center pb-5">{{ $project['name'] }}</h1>
+        <img src="{{ $project['image'] }}" alt="" class="img-fluid">
+        <p class="py-5">{{ $project['description'] }}</p>
     </div>
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="{{ route('about') }}" class="nav-link px-2 text-body-secondary">Chi sono</a>
             </li>
-            <li class="nav-item"><a href="{{ route('services') }}" class="nav-link px-2 text-body-secondary">Servizi</a>
+            <li class="nav-item"><a href="{{ route('services') }}"
+                    class="nav-link px-2 text-body-secondary">Servizi</a>
             </li>
             <li class="nav-item"><a href="{{ route('contacts') }}"
                     class="nav-link px-2 text-body-secondary">Contattami</a></li>

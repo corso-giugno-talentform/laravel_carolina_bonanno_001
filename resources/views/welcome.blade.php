@@ -13,28 +13,29 @@
 <body>
     <header>
         <nav class="container-fluid bg-body-tertiary shadow d-flex flex-wrap justify-content-center py-3">
-            <a href="/"
+            <a href="{{ route('homepage') }}"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto mx-4 link-body-emphasis text-decoration-none">
                 <img src="/images/logo.svg" alt="logo" width="80px">
             </a>
             <ul class="nav nav-pills mx-4">
-                <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">Chi sono</a></li>
-                <li class="nav-item"><a href="/servizi" class="nav-link">Servizi</a></li>
-                <li class="nav-item"><a href="/contatti" class="nav-link">Contattami</a></li>
+                <li class="nav-item"><a href="{{ route('homepage') }}" class="nav-link active"
+                        aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">Chi sono</a></li>
+                <li class="nav-item"><a href="{{ route('services') }}" class="nav-link">Servizi</a></li>
+                <li class="nav-item"><a href="{{ route('contacts') }}" class="nav-link">Contattami</a></li>
             </ul>
         </nav>
     </header>
     <div id="carouselExampleAutoplaying" class="carousel slide w-100" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://picsum.photos/1920/1080?grayscale" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/id/1/1920/1080?grayscale" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://picsum.photos/1920/1080?grayscale" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/id/2/1920/1080?grayscale" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://picsum.photos/1920/1080?grayscale" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/id/3/1920/1080?grayscale" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -64,9 +65,12 @@
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="/about" class="nav-link px-2 text-body-secondary">Chi sono</a></li>
-            <li class="nav-item"><a href="/servizi" class="nav-link px-2 text-body-secondary">Servizi</a></li>
-            <li class="nav-item"><a href="/contatti" class="nav-link px-2 text-body-secondary">Contattami</a></li>
+            <li class="nav-item"><a href="{{ route('about') }}" class="nav-link px-2 text-body-secondary">Chi sono</a>
+            </li>
+            <li class="nav-item"><a href="{{ route('services') }}" class="nav-link px-2 text-body-secondary">Servizi</a>
+            </li>
+            <li class="nav-item"><a href="{{ route('contacts') }}"
+                    class="nav-link px-2 text-body-secondary">Contattami</a></li>
         </ul>
         <p class="text-center text-body-secondary">© 2025 Carolina Bonanno</p>
     </footer>
